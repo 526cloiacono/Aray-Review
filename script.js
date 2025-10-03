@@ -1,4 +1,4 @@
-const foods =[
+const foods = [
     "Pasta",
     "Steak",
     "Chicken",
@@ -11,6 +11,17 @@ const foods =[
     "Wings"
 ];
 
-array.forEach(foods => {
-    document.getElementById('output')
+const output = document.getElementById("output");
+
+
+const ol = document.createElement("ol");
+output.replaceWith(ol);
+
+foods.sort();
+
+
+foods.forEach(food => {
+    const li = document.createElement("li");
+    li.textContent = food;
+    ol.appendChild(li);
 });
